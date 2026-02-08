@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products | Stock Manager</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<script src="../JS/app.js"></script>
+
+<body>
+    <header>
+    <h2>Dashboard</h2>
+    <button onclick="toggleDarkMode()">🌙</button>
+</header>
+
+
+<h2>Product Management</h2>
+
+<div class="form-box">
+    <input type="text" id="pid" placeholder="Product ID">
+    <input type="text" id="pname" placeholder="Product Name">
+    <input type="number" id="pprice" placeholder="Price">
+
+    <button onclick="addProduct()">Add Product</button>
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price (₹)</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody id="productTable"></tbody>
+</table>
+
+<a href="index.html">⬅ Back to Dashboard</a>
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/product.js"></script>
+</body>
+</html>

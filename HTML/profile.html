@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h3>Kirana Manager</h3>
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="products.html">📦 Products</a>
+        <a href="stocks.html">📊 Stock</a>
+        <a href="sales.html">💰 Sales</a>
+        <a href="reports.html">📈 Reports</a>
+        <a href="profile.html">👤 Profile</a>
+        <a href="help.html">❓ Help</a>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <header>
+            <h2>My Profile</h2>
+            <button onclick="toggleDarkMode()">🌙</button>
+        </header>
+
+        <form id="profileForm">
+            <h3>User Details</h3>
+
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="shop" placeholder="Shop Name">
+
+            <button type="submit">Save Profile</button>
+        </form>
+
+    </main>
+</div>
+
+<script src="../JS/app.js"></script>
+<script>
+    const profile = JSON.parse(localStorage.getItem("profile")) || {};
+
+    document.getElementById("name").value = profile.name || "";
+    document.getElementById("email").value = profile.email || "";
+    document.getElementById("shop").value = profile.shop || "";
+
+    document.getElementById("profileForm").addEventListener("submit", e => {
+        e.preventDefault();
+
+        const data = {
+            name: name.value,
+            email: email.value,
+            shop: shop.value
+        };
+
+        localStorage.setItem("profile", JSON.stringify(data));
+        alert("Profile saved successfully");
+    });
+</script>
+
+</body>
+</html>

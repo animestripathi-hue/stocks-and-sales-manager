@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h3>Kirana Manager</h3>
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="products.html">📦 Products</a>
+        <a href="stocks.html">📊 Stock</a>
+        <a href="sales.html">💰 Sales</a>
+        <a href="reports.html">📈 Reports</a>
+        <a href="profile.html">👤 Profile</a>
+        <a href="help.html">❓ Help</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <header>
+            <h2>Dashboard</h2>
+            <button onclick="toggleDarkMode()">🌙</button>
+        </header>
+
+        <!-- WELCOME -->
+        <section class="dashboard-welcome">
+            <h3>Welcome back 👋</h3>
+            <p>Manage your kirana store efficiently and easily.</p>
+        </section>
+
+        <!-- STATS -->
+        <section class="dashboard-stats">
+            <div class="card">
+                <h4>Total Products</h4>
+                <p id="statProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h4>Total Stock</h4>
+                <p id="statStock">0</p>
+            </div>
+
+            <div class="card">
+                <h4>Total Sales (₹)</h4>
+                <p id="statSales">0</p>
+            </div>
+        </section>
+
+        <!-- QUICK ACTIONS -->
+        <section class="dashboard-actions">
+            <a href="products.html" class="action-btn">➕ Add Product</a>
+            <a href="sales.html" class="action-btn">🧾 New Sale</a>
+            <a href="stocks.html" class="action-btn">📦 View Stock</a>
+        </section>
+
+    </main>
+</div>
+
+<script src="../JS/app.js"></script>
+<script>
+    const products = JSON.parse(localStorage.getItem("products")) || [];
+    const sales = JSON.parse(localStorage.getItem("sales")) || [];
+
+    document.getElementById("statProducts").innerText = products.length;
+
+    let stock = 0;
+    products.forEach(p => stock += Number(p.quantity));
+    document.getElementById("statStock").innerText = stock;
+
+    let total = 0;
+    sales.forEach(s => total += Number(s.total));
+    document.getElementById("statSales").innerText = total;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<script src="../JS/app.js"></script>
+
+<body>
+<header>
+    <h2>Dashboard</h2>
+    <button onclick="toggleDarkMode()">🌙</button>
+</header>
+
+<h2>Sales Entry</h2>
+
+<div class="form-box">
+    <select id="saleProduct"></select>
+    <input type="number" id="saleQty" placeholder="Quantity">
+    <button onclick="sellProduct()">Sell</button>
+</div>
+
+<h3>Sales History</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price (₹)</th>
+            <th>Qty</th>
+            <th>Total (₹)</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody id="salesTable"></tbody>
+</table>
+
+<a href="index.html">⬅ Back to Dashboard</a>
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/sales.js"></script>
+</body>
+</html>

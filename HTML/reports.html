@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reports</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<script src="../JS/app.js"></script>
+
+<body>
+
+<header>
+    <h2>Reports & Analytics</h2>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</header>
+
+<div class="report-cards">
+    <div class="card">
+        <h3>Total Products</h3>
+        <p id="totalProducts">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Stock</h3>
+        <p id="totalStock">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Sales (₹)</h3>
+        <p id="totalSales">0</p>
+    </div>
+</div>
+
+<canvas id="salesChart"></canvas>
+
+<script src="../JS/report.js"></script>
+<script src="../JS/chart.js"></script>
+<script src="../JS/app.js"></script>
+
+</body>
+</html>

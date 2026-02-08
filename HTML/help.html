@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Help</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h3>Kirana Manager</h3>
+        <a href="index.html">🏠 Dashboard</a>
+        <a href="products.html">📦 Products</a>
+        <a href="stocks.html">📊 Stock</a>
+        <a href="sales.html">💰 Sales</a>
+        <a href="reports.html">📈 Reports</a>
+        <a href="profile.html">👤 Profile</a>
+        <a href="help.html">❓ Help</a>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <header>
+            <h2>Help & Guide</h2>
+            <button onclick="toggleDarkMode()">🌙</button>
+        </header>
+
+        <div class="card">
+            <h3>How to use the system</h3>
+            <p><b>Products:</b> Add and manage items sold in the shop.</p>
+            <p><b>Stock:</b> View stock levels and delete discontinued items.</p>
+            <p><b>Sales:</b> Record product sales and auto-update stock.</p>
+            <p><b>Reports:</b> View total sales, stock, and charts.</p>
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+            <h3>Common Questions</h3>
+            <p><b>Q:</b> Is data saved online?<br>
+               <b>A:</b> No, data is stored locally using browser storage.</p>
+
+            <p><b>Q:</b> Can deleted products be recovered?<br>
+               <b>A:</b> No, deleted products are permanently removed.</p>
+        </div>
+
+    </main>
+</div>
+
+<script src="../JS/app.js"></script>
+
+</body>
+</html>

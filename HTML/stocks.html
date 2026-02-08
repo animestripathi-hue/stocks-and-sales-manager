@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Management</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<script src="../JS/app.js"></script>
+
+<body>
+    <header>
+    <h2>Dashboard</h2>
+    <button onclick="toggleDarkMode()">🌙</button>
+</header>
+
+
+<h2>Stock Update</h2>
+
+<div class="form-box">
+    <select id="productSelect"></select>
+    <input type="number" id="addQty" placeholder="Add Quantity">
+    <button onclick="updateStock()">Update Stock</button>
+</div>
+
+<table>
+    <thead>
+    <tr>
+        
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price (₹)</th>
+        <th>Quantity</th>
+        <th>Status</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody id="stockTable"></tbody>
+</table>
+
+<a href="index.html">⬅ Back to Dashboard</a>
+
+
+<script src="../JS/utils.js"></script>
+<script src="../JS/stock.js"></script>
+</body>
+</html>
